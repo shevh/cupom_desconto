@@ -10,24 +10,40 @@ module.exports = app => {
      *     Pessoa:
      *       type: object
      *       required:
-     *         - nome
+     *         - nomeCompleto
      *       properties:
      *         id:
      *           type: integer
      *           description: The auto-generated id of Pessoa
-     *         nome:
+     *         nomeCompleto:
      *           type: string
-     *           description: Nome do Pessoa
-     *         email:
+     *           description: Nome Completo do Pessoa
+     *         endereco:
      *           type: string
-     *           description: Email do Pessoa
-     *         senha:
+     *           description: Endereco da Pessoa
+     *         numero:
+     *           type: integer
+     *           description: Numero da Pessoa
+     *         cep:
      *           type: string
+     *           description: Cep da Pessoa
+     *         estado:
+     *           type: string
+     *           description: Estado da Pessoa
+     *         idAdministrador:
+     *           type: boolean
+     *           description: Senha do Pessoa
+     *         idComprador:
+     *           type: boolean
      *           description: Senha do Pessoa
      *       example:
-     *         nome: everton
-     *         email: everton@admin.com
-     *         senha: 123456
+     *         nomeCompleto: everton 
+     *         endereco: Rua da Silva Pinto
+     *         numero: 123
+     *         cep: 13165-000
+     *         estado: Minas Gerais
+     *         idAdministrador: false
+     *         idComprador: true
      */
 
     /**

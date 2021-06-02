@@ -111,9 +111,55 @@ module.exports = app => {
     router.get("/:id", compradores.findOne);
   
     // Update a compradores with id
+    /**
+     * @swagger
+     * /api/compradores/{id}:
+     *   put:
+     *     summary: Pega um comprador por seu Id
+     *     tags: [Compradores]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: integer
+     *         required: true
+     *         description: Id do comprador
+     *     responses:
+     *       200:
+     *         description: Comprador encontrado
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Comprador'
+     *       404:
+     *         description: Comprador não encontrado
+     */
     router.put("/:id", compradores.update);
   
     // Delete a compradores with id
+    /**
+     * @swagger
+     * /api/compradores/{id}:
+     *   delete:
+     *     summary: Pega um comprador por seu Id
+     *     tags: [Compradores]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: integer
+     *         required: true
+     *         description: Id do comprador
+     *     responses:
+     *       200:
+     *         description: Comprador encontrado
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Comprador'
+     *       404:
+     *         description: Comprador não encontrado
+     */
     router.delete("/:id", compradores.delete);
   
     // Delete all compradores

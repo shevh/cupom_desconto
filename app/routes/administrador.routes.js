@@ -107,6 +107,29 @@ module.exports = app => {
     router.get("/:id", administradores.findOne);
   
     // Update a administradores with id
+    /**
+     * @swagger
+     * /api/administradores/{id}:
+     *   put:
+     *     summary: Pega um administrador por seu Id
+     *     tags: [Administradores]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: integer
+     *         required: true
+     *         description: Id do administrador
+     *     responses:
+     *       200:
+     *         description: Administrador encontrado
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Administrador'
+     *       404:
+     *         description: Administrador não encontrado
+     */
     router.put("/:id", administradores.update);
   
     // Delete a administradores with id

@@ -111,9 +111,55 @@ module.exports = app => {
     router.get("/:id", fornecedores.findOne);
   
     // Update a fornecedores with id
+    /**
+     * @swagger
+     * /api/fornecedores/{id}:
+     *   put:
+     *     summary: Pega um fornecedor por seu Id
+     *     tags: [Fornecedores]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: integer
+     *         required: true
+     *         description: Id do fornecedor
+     *     responses:
+     *       200:
+     *         description: Fornecedor encontrado
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Fornecedor'
+     *       404:
+     *         description: Fornecedor não encontrado
+     */
     router.put("/:id", fornecedores.update);
   
     // Delete a fornecedores with id
+    /**
+     * @swagger
+     * /api/fornecedores/{id}:
+     *   delete:
+     *     summary: Pega um fornecedor por seu Id
+     *     tags: [Fornecedores]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: integer
+     *         required: true
+     *         description: Id do fornecedor
+     *     responses:
+     *       200:
+     *         description: Fornecedor encontrado
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Fornecedor'
+     *       404:
+     *         description: Fornecedor não encontrado
+     */
     router.delete("/:id", fornecedores.delete);
   
     // Delete all fornecedores

@@ -123,9 +123,55 @@ module.exports = app => {
     router.get("/:id", cupons.findOne);
   
     // Update a cupons with id
+    /**
+     * @swagger
+     * /api/cupons/{id}:
+     *   put:
+     *     summary: Pega um cupom por seu Id
+     *     tags: [Cupons]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: string
+     *         required: true
+     *         description: The book id
+     *     responses:
+     *       200:
+     *         description: The book description by id
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Cupom'
+     *       404:
+     *         description: The book was not found
+     */
     router.put("/:id", cupons.update);
   
     // Delete a cupons with id
+    /**
+     * @swagger
+     * /api/cupons/{id}:
+     *   delete:
+     *     summary: Pega um cupom por seu Id
+     *     tags: [Cupons]
+     *     parameters:
+     *       - in: path
+     *         name: id
+     *         schema:
+     *           type: string
+     *         required: true
+     *         description: The book id
+     *     responses:
+     *       200:
+     *         description: The book description by id
+     *         contens:
+     *           application/json:
+     *             schema:
+     *               $ref: '#/components/schemas/Cupom'
+     *       404:
+     *         description: The book was not found
+     */
     router.delete("/:id", cupons.delete);
   
     // Delete all cupons
