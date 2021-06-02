@@ -36,6 +36,9 @@ module.exports = app => {
      *         publicado:
      *           type: boolean
      *           description: The codigo publicado
+     *         caminhoImg:
+     *           type: string
+     *           description: The path img
      *       example:
      *         codigo: 123
      *         categoria: teste
@@ -43,7 +46,8 @@ module.exports = app => {
      *         descricao: bom produto
      *         porcentagemDesconto: 10.2
      *         urlProduto: Alexander kabum.com
-     *         publicado: true
+     *         publicado: 1
+     *         caminhoImg: src/imgCupom/cupom1.png
      */
 
     /**

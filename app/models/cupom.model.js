@@ -20,6 +20,9 @@ module.exports = (sequelize, Sequelize) => {
       },
       publicado: {
         type: Sequelize.BOOLEAN
+      },
+      caminhoImg: {
+        type: Sequelize.STRING
       }
     });
   

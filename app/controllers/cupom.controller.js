@@ -20,7 +20,8 @@ exports.create = (req, res) => {
       descricao: req.body.descricao,
       porcentagemDesconto: req.body.porcentagemDesconto,
       urlProduto: req.body.urlProduto,
-      publicado: req.body.publicado ? req.body.publicado : false
+      publicado: req.body.publicado ? req.body.publicado : false,
+      caminhoImg: req.body.caminhoImg
     };
   
     // Save Cupom in the database
