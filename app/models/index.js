@@ -23,5 +23,6 @@ db.cupons = require("./cupom.model.js")(sequelize, Sequelize);
 db.administradores = require("./administrador.model.js")(sequelize, Sequelize);
 db.compradores = require("./comprador.model.js")(sequelize, Sequelize);
 db.fornecedores = require("./fornecedor.model.js")(sequelize, Sequelize);
+db.pessoas = require("./pessoa.model.js")(sequelize, Sequelize);
 
 module.exports = db;
