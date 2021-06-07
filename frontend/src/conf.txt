@@ -1,0 +1,22 @@
+
+git clone https://github.com/shevh/cupom_desconto.git
+npm i
+npm install swagger-jsdoc swagger-ui-express
+git clone https://github.com/twbs/bootstrap.git
+npm install bootstrap
+
+node server.js
+
+http://localhost:8080/api-docs/
+
+
+
+commit:
+
+
+
+BD
+
+INSERT INTO `cupoms` (`id`, `codigo`, `categoria`, `titulo`, `descricao`, `porcentagemDesconto`, `urlProduto`, `publicado`, `caminhoImg`, `createdAt`, `updatedAt`) VALUES
+(1, 1, 'notebook', 'Notebook IdeaPad Gaming 3i (15\" Intel)', 'Eleva o jogo a outro nível\r\nEquipado com Processador Intel® Core™ de 10ª Geração, placa gráfica dedicada NVIDIA®', 10, 'https://www.lenovo.com/br/pt/laptops/ideapad/ideapad-gaming-laptops/IdeaPad-Gaming-3i-15%E2%80%9D/p/82CG0004BR', 1, 'src/imgCupom/ideapad-gaming.png', '2021-06-02 03:06:50', '2021-06-02 03:06:50'),
+(2, 2, 'Eletrodomestico', 'Ar Condicionado Split Inverter Fujitsu Só Frio High Wall 9000 BTUs Com Sensor ASBG09JMCA 220V', 'Modelo: ASBG09JMCA / AOBG09JMCA', 19, 'https://www.frigelar.com.br/ar-condicionado-split-inverter-fujitsu-so-frio-high-wall-9000-btus-com-sensor-asbg09jmca-220v/p/kit505', 1, 'src/imgCupom/ac.png', '2021-06-02 03:54:52', '2021-06-02 03:54:52');

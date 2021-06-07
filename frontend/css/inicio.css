@@ -1,0 +1,11 @@
+.porcentagem{
+    DISPLAY: block;
+    background-color: red;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+.card-text{
+    height: 115px;
+}
